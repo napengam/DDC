@@ -1,19 +1,5 @@
 <?php
 
-$fh = fopen("ddc.txt", 'r');
-$ddc = [];
-$inner = [];
-$phpCode = "\$ddc=[";
-while (($buffer = fgets($fh, 4096)) !== false) {
-    list($code, $text) = explode('', $buffer, 2);
-    $inner[] = "'$code'=>'$text'";
-    $ddc[$code] = $text;
-}
-$phpCode .= implode(",<br>", $inner) . "];";
-echo $phpCode;
-if (!feof($fh)) {
-    echo "Fehler: fgets() schlug unerwartet fehl\n";
-}
 
 $ddc = [
     '000' => 'Computer science, information & general works',
