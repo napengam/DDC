@@ -1,6 +1,4 @@
 <?php
-
-
 $ddc = [
     '000' => 'Computer science, information & general works',
     '001' => 'Knowledge',
